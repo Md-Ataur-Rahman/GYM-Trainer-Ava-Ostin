@@ -1,0 +1,17 @@
+footer {
+    background-color: #121212;
+}
+footer .inner-footer {
+    text-align: center;
+    padding: 2rem 0;
+}
+footer .inner-footer .footer-links a{
+    color: whitesmoke;
+    text-decoration: none;
+    margin-right: 1rem;
+}
+.footer-text {
+    color: whitesmoke;
+    font-size: 1rem;
+    padding-top: .75rem;
+}
