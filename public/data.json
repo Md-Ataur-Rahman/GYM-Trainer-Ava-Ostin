@@ -1,18 +1,21 @@
 [
     {
         "name": "Cardio Class",
+        "id": 1,
         "price": "$26.7",
         "image": "./images/services/cardio-class.jpg",
         "text": "lorem kwjv inji qibvibqdivjsdnjkabvhbv ibviev nsaclkkanckjds   nvajn kabkbakv ns abkkasd"
     },
     {
         "name": "Cross Fit",
+        "id": 2,
         "price": "$39.5",
         "image": "./images/services/crossfit-class.jpg",
         "text": "lorem kwjv inji qibvibqdivjsdnjkabvhbv ibviev nsaclkkanckjds   nvajn kabkbakv ns abkkasd"
     },
     {
         "name": "Yoga Class",
+        "id": 3,
         "price": "$19.2",
         "image": "./images/services/yoga-class.jpg",
         "text": "lorem kwjv inji qibvibqdivjsdnjkabvhbv ibviev nsaclkkanckjds   nvajn kabkbakv ns abkkasd"
