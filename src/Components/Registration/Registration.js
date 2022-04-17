@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
 import SocialBtn from "../SocialBtn/SocialBtn";
 import "./Registration.css";
@@ -33,6 +33,16 @@ const Registration = () => {
     createUserWithEmailAndPassword(userInfo.email, userInfo.password);
     console.log("success");
   };
+
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/";
+
+  useEffect(() => {
+    if (user) {
+      navigate(from);
+    }
+  }, [user]);
 
   console.log(userInfo);
   return (

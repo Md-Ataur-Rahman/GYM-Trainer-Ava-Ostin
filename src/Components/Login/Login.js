@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   useSendPasswordResetEmail,
   useSignInWithEmailAndPassword,
 } from "react-firebase-hooks/auth";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
 import SocialBtn from "../SocialBtn/SocialBtn";
 const Login = () => {
@@ -37,6 +37,15 @@ const Login = () => {
     signInWithEmailAndPassword(userInfo.email, userInfo.password);
     console.log("success");
   };
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/";
+
+  useEffect(() => {
+    if (user) {
+      navigate(from);
+    }
+  }, [user]);
   return (
     <div className="form-container">
       <h3 className="form-title">Login</h3>
