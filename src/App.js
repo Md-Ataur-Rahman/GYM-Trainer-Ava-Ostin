@@ -7,7 +7,7 @@ import AboutMe from "./Components/AboutMe/AboutMe";
 import Blogs from "./Components/Blogs/Blogs";
 import NotFound from "./Components/NotFound/NotFound";
 import CheckOut from "./Components/CheckOut/CheckOut";
-import SignUp from "./Components/SignUp/SignUp";
+import Registration from "./Components/Registration/Registration";
 import Login from "./Components/Login/Login";
 import Footer from "./Components/Footer/Footer";
 
@@ -21,7 +21,7 @@ function App() {
         <Route path="/aboutme" element={<AboutMe />}></Route>
         <Route path="/blogs" element={<Blogs />}></Route>
         <Route path="/login" element={<Login />}></Route>
-        <Route path="/signup" element={<SignUp />}></Route>
+        <Route path="/registration" element={<Registration />}></Route>
         <Route path="/checkout" element={<CheckOut />}></Route>
         <Route path="*" element={<NotFound />}></Route>
       </Routes>

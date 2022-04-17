@@ -30,8 +30,8 @@ const Header = () => {
             <Nav.Link as={Link} to="/login" className="text-white">
               Login
             </Nav.Link>
-            <Nav.Link as={Link} to="/signup" className="text-white">
-              SignUp
+            <Nav.Link as={Link} to="/registration" className="text-white">
+              Registration
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
