@@ -1,6 +1,7 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { BsGithub, BsLinkedin, BsTwitter } from "react-icons/bs";
 import "./Footer.css";
 
 const Footer = () => {
@@ -10,11 +11,34 @@ const Footer = () => {
     <footer>
       <Container>
         <div className="inner-footer">
-          <div className="footer-links">
-            <Link to="/aboutme">AboutMe</Link>
-            <Link to="/blogs">Blogs</Link>
+          <div className="inner-footer-1">
+            <Link to="/" style={{ textDecoration: "none" }}>
+              <div className="footer-text text-white">
+                <span>Ava Ostin</span>
+                <h3>GYM Trainer</h3>
+              </div>
+            </Link>
+            <p className="footer-text text-white">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur,
+              facilis repellat libero, explicabo laborum omnis minima iure error
+              corrupti ratione, sint voluptatum saepe sapiente eos quod iusto.
+              Similique, sunt numquam!
+            </p>
+            <div className="footer-links">
+              <Link to="/aboutme">AboutMe</Link>
+              <Link to="/blogs">Blogs</Link>
+            </div>
           </div>
-          <h5 className="footer-text">All Copyrights reserved &copy; {year}</h5>
+          <div className="inner-footer-2">
+            <div className="footer-logo-container">
+              <BsGithub className="footer-logo" />
+              <BsLinkedin className="footer-logo" />
+              <BsTwitter className="footer-logo" />
+            </div>
+            <h5 className="footer-text">
+              All Copyrights reserved &copy; {year}
+            </h5>
+          </div>
         </div>
       </Container>
     </footer>

@@ -13,7 +13,7 @@ const Header = () => {
       <Container>
         <Navbar.Brand as={Link} to="/" className="text-white">
           <div className="logo-container">
-            <p>Ava Ostin</p>
+            <p className="logo-owner">Ava Ostin</p>
             <h3>GYM Trainer</h3>
           </div>
         </Navbar.Brand>

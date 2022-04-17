@@ -11,3 +11,17 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem
 }
+/* mobile */
+@media only screen and (max-width: 600px) {
+    .inner-services-section {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* Tabel */
+
+@media only screen and (min-width: 601px) and (max-width: 925px) {
+    .inner-services-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
