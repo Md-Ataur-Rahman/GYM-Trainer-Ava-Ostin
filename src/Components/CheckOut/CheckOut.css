@@ -1,0 +1,12 @@
+.checkout-container {
+    width: 60%;
+    height: calc(100vh - 2rem);
+    text-align: center;
+    margin: 0 auto;
+}
+.checkout-container-text {
+    padding: 3rem 1rem;
+    margin: 2rem 0;
+    background-color: rgba(208, 208, 255, 0.572);
+    color: rgb(78, 243, 59);
+}
