@@ -1,0 +1,6 @@
+.not-found-text {
+    text-align: center;
+    height: calc(100vh - 10rem);
+    margin: 10rem 0;
+    font-size: 6rem;
+}
