@@ -1,0 +1,11 @@
+.about-container {
+    width: 65%;
+    margin: 25% 0;
+}
+.about-title {
+    font-size: 2.8rem
+}
+.about-text {
+    line-height: 1.5;
+    font-weight: 600;
+}
