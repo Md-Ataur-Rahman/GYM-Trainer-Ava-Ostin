@@ -1,4 +1,25 @@
-# Getting Started with Create React App
+# GYM Trainer (Ava Ostin)
+
+[GYM Trainer (Ava Ostin)]()
+
+### Features and Functionality In My Website
+
+- React Bootstrap
+- Bootstrap
+- React Toast
+- Firebase
+- React Router
+
+### A list Of Technologies
+
+- React Bootstrap
+- Bootstrap
+- React Toast
+- Firebase Authentication
+- firebase hostin
+- React Router
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
