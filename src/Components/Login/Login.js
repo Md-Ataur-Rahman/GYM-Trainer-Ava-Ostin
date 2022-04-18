@@ -1,21 +1,34 @@
 import React, { useEffect, useState } from "react";
 import {
+  useAuthState,
   useSendPasswordResetEmail,
   useSignInWithEmailAndPassword,
 } from "react-firebase-hooks/auth";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
 import SocialBtn from "../SocialBtn/SocialBtn";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 const Login = () => {
   const [userInfo, setUserInfo] = useState({
     email: "",
     password: "",
   });
 
-  const [signInWithEmailAndPassword, user, loading, error] =
+  const [user] = useAuthState(auth);
+  const [signInWithEmailAndPassword, u, loading, error] =
     useSignInWithEmailAndPassword(auth);
-  const [sendPasswordResetEmail, sending, resetError] =
-    useSendPasswordResetEmail(auth);
+  const [sendPasswordResetEmail] = useSendPasswordResetEmail(auth);
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/";
+
+  useEffect(() => {
+    if (user) {
+      navigate(from);
+    }
+  }, [user]);
 
   const handlerEmailChange = (e) => {
     setUserInfo({ ...userInfo, email: e.target.value });
@@ -28,24 +41,17 @@ const Login = () => {
   const handlerReset = async () => {
     if (userInfo?.email) {
       await sendPasswordResetEmail(userInfo.email);
-      alert("Sent email");
+      toast("Sent email");
+    } else {
+      toast("Please fill up require email");
     }
   };
 
   const handlerSubmit = (e) => {
     e.preventDefault();
     signInWithEmailAndPassword(userInfo.email, userInfo.password);
-    console.log("success");
   };
-  const navigate = useNavigate();
-  const location = useLocation();
-  const from = location.state?.from?.pathname || "/";
 
-  useEffect(() => {
-    if (user) {
-      navigate(from);
-    }
-  }, [user]);
   return (
     <div className="form-container">
       <h3 className="form-title">Login</h3>
@@ -64,6 +70,7 @@ const Login = () => {
           required
           onChange={handlerPasswordChange}
         />
+        {error?.code}
         <input type="submit" value="Login" />
       </form>
       <button
@@ -80,6 +87,7 @@ const Login = () => {
           Registration
         </Link>
       </p>
+      <ToastContainer />
     </div>
   );
 };

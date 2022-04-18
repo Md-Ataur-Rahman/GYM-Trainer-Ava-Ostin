@@ -3,19 +3,13 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
 import SocialBtn from "../SocialBtn/SocialBtn";
 import "./Registration.css";
-import {
-  useCreateUserWithEmailAndPassword,
-  useSendEmailVerification,
-} from "react-firebase-hooks/auth";
+import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 const Registration = () => {
   const [userInfo, setUserInfo] = useState({
     name: "",
     email: "",
     password: "",
   });
-
-  const [sendEmailVerification, sending, VarificationError] =
-    useSendEmailVerification(auth);
 
   const [createUserWithEmailAndPassword, user, loading, error] =
     useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
@@ -31,7 +25,6 @@ const Registration = () => {
   const handlerSubmit = (e) => {
     e.preventDefault();
     createUserWithEmailAndPassword(userInfo.email, userInfo.password);
-    console.log("success");
   };
 
   const navigate = useNavigate();
@@ -44,7 +37,6 @@ const Registration = () => {
     }
   }, [user]);
 
-  console.log(userInfo);
   return (
     <div className="form-container">
       <h3 className="form-title">Registration</h3>
@@ -64,6 +56,7 @@ const Registration = () => {
           required
           onChange={handlerPasswordChange}
         />
+        {error?.code}
         <input type="submit" value="Registration" />
       </form>
       <SocialBtn />
