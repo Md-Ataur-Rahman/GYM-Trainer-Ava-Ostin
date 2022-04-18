@@ -19,10 +19,10 @@ const Footer = () => {
               </div>
             </Link>
             <p className="footer-text text-white">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur,
-              facilis repellat libero, explicabo laborum omnis minima iure error
-              corrupti ratione, sint voluptatum saepe sapiente eos quod iusto.
-              Similique, sunt numquam!
+              Going to the gym every day can help improve your cardiovascular
+              system, strengthen your muscles, help you maintain your weight,
+              boost your mental health and decrease the odds that you'll develop
+              other health conditions.
             </p>
             <div className="footer-links">
               <Link to="/aboutme">AboutMe</Link>

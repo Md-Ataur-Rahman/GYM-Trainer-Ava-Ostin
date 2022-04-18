@@ -13,12 +13,13 @@ const Banner = () => {
             </h1>
             <h4 className="banner-sub-title">I'm A Gym Trainer</h4>
             <p className="banner-text">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, sit
+              Keeping fit will benefit your body and mind. And that's the
               <br />
-              obcaecati. Fugiat, quasi, voluptate error iste quam fugit impedit
+              benefit of gym . I am usually provide this global service.
               <br />
-              rerum quia dolorum harum repellat doloribus eum magni quaerat illo
-              quo.
+              And To receive this service you must be part of my service.
+              <br />
+              So Are you ready
             </p>
             <button className="banner-button">I'm Ready</button>
           </div>
